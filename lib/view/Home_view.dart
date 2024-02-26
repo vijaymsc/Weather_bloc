@@ -50,7 +50,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
             );
           }
           final value = state.weatherModel;
-          String formattedDate = DateFormat.yMMMMd().format(value.list![0].dtTxt!);
+          String formattedDate =
+              DateFormat.yMMMMd().format(value.list![0].dtTxt!);
           return Center(
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -61,7 +62,6 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   Text(value.city!.country!),
                   Text(formattedDate),
                   Text(value.list![0].weather![0].main!),
-
                 ],
               ),
             ),
